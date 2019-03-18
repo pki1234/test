@@ -27,7 +27,7 @@
 	%>
 	
 	<%=memberDto.getNo()%>,
-	<a href='../testmember/update?no=<%=memberDto.getNo()%>'><%=memberDto.getName()%></a>,
+	<a href='./update?no=<%=memberDto.getNo()%>'><%=memberDto.getName()%></a>,
 	<%=memberDto.getEmail()%>,
 	<%=memberDto.getPassword()%>,
 	<%=memberDto.getCreateDate()%>

@@ -7,13 +7,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Go To DMC</title>
+<title>Insert title here</title>
 </head>
 <body>
-
-	<h1>아프리카 원주민의 쓰라린 추위</h1>
+	
+	
+	<jsp:include page="/header.jsp"/>
+	<h1>회원목록</h1>
 	<div>
-		<a href="../testmember/tadd">신규 회원</a>
+		<a href="./add">신규 회원</a>
 	</div>
 	<br/>
 	<%
@@ -27,17 +29,17 @@
 	%>
 	
 	<%=memberDto.getNo()%>,
-	<a href='../testmember/update?no=<%=memberDto.getNo()%>'><%=memberDto.getName()%></a>,
+	<a href='./update?mNo=<%=memberDto.getNo()%>'><%=memberDto.getName()%></a>,
 	<%=memberDto.getEmail()%>,
-	<%=memberDto.getPassword()%>,
 	<%=memberDto.getCreateDate()%>
-	
-	<a href='./delete?no=<%=memberDto.getNo()%>'>[삭제]</a>
+	<a href='./delete?mNo=<%=memberDto.getNo()%>'>[삭제]</a>
 	<br>
 	
 	<%
 		}
 	%>
+	
+	<jsp:include page="/Tail.jsp"/>
 	
 
 </body>
